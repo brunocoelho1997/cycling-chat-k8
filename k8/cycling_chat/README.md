@@ -1,3 +1,10 @@
+Create image on local environment:
+docker build -t cyclingchat-image:1.0 .
+
+To push images to the docker hub it's necessary to:
+* docker login -u brunocoelho1997 -p password
+* docker push brunocoelho1997/cyclingchat-image:1.0
+
 Access deployment through the service:
 * kubectl apply -f k8/deployment.yaml
 * kubectl apply -f k8/service.yaml

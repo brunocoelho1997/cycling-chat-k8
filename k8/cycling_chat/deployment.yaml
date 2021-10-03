@@ -13,8 +13,8 @@ spec:
         app: cyclingchat
     spec:
       containers:
-        - image: "cyclingchat-image-new:1.0"
-          imagePullPolicy: Never
+        - image: "brunocoelho1997/cyclingchat-image:1.0"
+          imagePullPolicy: IfNotPresent
           name: cyclingchat-pod
           ports:
             - containerPort: 8080
