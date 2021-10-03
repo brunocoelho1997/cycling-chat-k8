@@ -32,6 +32,6 @@ Set up Networking for the Cluster
   * sudo tee -a /etc/sysctl.conf
   * sudo sysctl -p
 * on master node rum:
-  * kubectl apply -f /home/bscoelho/workspace/K8Course/cycling-chat-k8/k8/kube-flannel.yml
+  * kubectl apply -f /home/bscoelho/workspace/K8Course/cycling-chat-k8/k8/cluster_config/kube-flannel.yml
 * wait a few seconds and all nodes should have the status "Ready"
   * kubectl get nodes

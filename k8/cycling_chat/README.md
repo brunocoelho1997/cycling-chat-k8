@@ -20,6 +20,10 @@ Access deployment through the ingress:
 * access the deployment with the created ip by ingress (k9s to see the address listed on the ingress)
 
 
+How to access the API:
+* Apply the service.yaml
+* List services
+* Get the Cluster-ip from the cyclingchat-service
 
 Fonts:
 * https://kubernetes.io/docs/concepts/services-networking/service/
