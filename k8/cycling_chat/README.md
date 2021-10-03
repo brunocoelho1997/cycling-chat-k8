@@ -25,6 +25,11 @@ How to access the API:
 * List services
 * Get the Cluster-ip from the cyclingchat-service
 
+
+
+Access h2-console memory database:
+* http://localhost:8080/h2-console/
+
 Fonts:
 * https://kubernetes.io/docs/concepts/services-networking/service/
 * https://minikube.sigs.k8s.io/docs/handbook/accessing/
