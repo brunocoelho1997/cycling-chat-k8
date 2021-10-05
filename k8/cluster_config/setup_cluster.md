@@ -38,11 +38,6 @@ Set up Networking for the Cluster
 
 
 After reboot the worker and the master:
-slave:
-* sudo kubeadm reset
-* disable swap: sudo swapoff -a
-* kubeadm join 192.168.1.91:6443 --token 4dibir.scpjap5nn3igjt63 --discovery-token-ca-cert-hash sha256:3a15755b61ecb5160500bfd0dc83d4343cf03a4a928a518619c019d0985a0f6a
-
 master:
 * sudo kubeadm reset
 * disable swap: sudo swapoff -a
@@ -50,3 +45,9 @@ master:
 * sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 * sudo chown $(id -u):$(id -g) $HOME/.kube/config
 * kubectl apply -f /home/bscoelho/workspace/K8Course/cycling-chat-k8/k8/cluster_config/kube-flannel.yml
+
+slave:
+* sudo kubeadm reset
+* disable swap: sudo swapoff -a
+* kubeadm join 192.168.1.91:6443 --token 4dibir.scpjap5nn3igjt63 --discovery-token-ca-cert-hash sha256:3a15755b61ecb5160500bfd0dc83d4343cf03a4a928a518619c019d0985a0f6a
+

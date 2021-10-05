@@ -1,0 +1,20 @@
+replicaCount: 2
+
+extraEnv:
+  - name: spring.datasource.url
+    value: "jdbc:postgresql://postgresql:5432/postgres"
+  - name: spring.datasource.username
+    value: "postgres"
+  - name: spring.datasource.password
+    value: "postgres"
+
+
+containers:
+  ports:
+    - name: http
+      containerPort: 8080
+      protocol: TCP
+
+
+serviceAccount:
+  create: false

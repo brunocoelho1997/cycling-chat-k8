@@ -1,0 +1,6 @@
+persistence:
+  existingClaim: "task-pv-claim"
+
+global:
+  postgresql:
+    postgresqlPassword: postgres

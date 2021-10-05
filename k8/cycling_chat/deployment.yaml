@@ -19,3 +19,10 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+          env:
+            - name: spring.datasource.url
+              value: "jdbc:postgresql://postgresql:5432/postgres"
+            - name: spring.datasource.username
+              value: "postgres"
+            - name: spring.datasource.password
+              value: "postgres"
