@@ -5,6 +5,7 @@ import com.example.cyclingchat.repositories.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,6 +25,13 @@ public class MessageService {
         message.setPodName(hostname.orElse("unrecognized pod"));
 
         messageRepository.save(message);
+    }
+
+    public List<Message> getMessages(int numberOfMessages) {
+
+        List<Message> allByOrderByIdDesc = messageRepository.findAllByOrderByIdDesc();
+
+        return numberOfMessages > allByOrderByIdDesc.size()? allByOrderByIdDesc.subList(0, allByOrderByIdDesc.size()-1) : allByOrderByIdDesc.subList(0, numberOfMessages);
     }
 
 }
