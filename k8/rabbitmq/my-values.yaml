@@ -1,0 +1,11 @@
+auth:
+  username: rabbit
+  password: rabbit
+
+persistence:
+  enabled: false
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 250Mi

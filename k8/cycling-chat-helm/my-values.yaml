@@ -7,7 +7,12 @@ extraEnv:
     value: "postgres"
   - name: spring.datasource.password
     value: "postgres"
-
+  - name: spring.rabbitmq.host
+    value: "rabbitmq"
+  - name: spring.rabbitmq.username
+    value: "rabbit"
+  - name: spring.rabbitmq.password
+    value: "rabbit"
 
 containers:
   ports:

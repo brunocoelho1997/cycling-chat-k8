@@ -39,6 +39,14 @@ Postgresql
 cycling-chat-helm
 * helm upgrade --install -f k8/cycling-chat-helm/my-values.yaml cycling-chat k8/cycling-chat-helm/
 
+## Rabbit
+
+To access the rabbitmq admin panel it's necessary:
+* port forward with k9s to rabbitmq/amqp:15672
+* go to the link: http://localhost:5672/
+
+To point the api to the rabbit:
+* use host from rabbits service -> get cluster-ip
 
 ##Fonts:
 * https://kubernetes.io/docs/concepts/services-networking/service/
